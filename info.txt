@@ -7,3 +7,5 @@ npx tailwindcss init -p
 
 https://react-icons.github.io/react-icons/
 npm install react-icons --save
+
+https://youtu.be/xUqvXaiCmHI

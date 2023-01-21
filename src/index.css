@@ -7,9 +7,17 @@ html {
   scroll-behavior: smooth;
   font-family: 'Raleway', sans-serif;
 }
+body {
+  padding: 0 15px
+}
 body, p {
   font-weight: 400;
 }
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
+}
+
+/* custom */
+.headerbg {
+  background: linear-gradient(90deg, #C6E0FF 2.5%, #F0F7FF 101.46%);
 }
