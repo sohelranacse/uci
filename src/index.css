@@ -7,17 +7,22 @@ html {
   scroll-behavior: smooth;
   font-family: 'Raleway', sans-serif;
 }
-body {
-  padding: 0 15px
-}
 body, p {
   font-weight: 400;
+  font-size: 14px;
 }
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
+}
+a {
+  font-size: 15px;
 }
 
 /* custom */
 .headerbg {
   background: linear-gradient(90deg, #C6E0FF 2.5%, #F0F7FF 101.46%);
+}
+.AboutUsbg {
+  background: linear-gradient(178.36deg, rgba(255, 255, 255, 0.4) -2.43%, rgba(255, 255, 255, 0.1) 105.08%);
+  /* backdrop-filter: blur(100px); */
 }

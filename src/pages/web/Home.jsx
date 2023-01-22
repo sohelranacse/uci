@@ -13,7 +13,6 @@ function Home() {
       <Helmet>
         <title>UCI International</title>
       </Helmet>
-      <h3>Homepage</h3>
       <Hero />
       <AboutUs />
       <Experience />
