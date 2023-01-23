@@ -23,6 +23,5 @@ a {
   background: linear-gradient(90deg, #C6E0FF 2.5%, #F0F7FF 101.46%);
 }
 .AboutUsbg {
-  background: linear-gradient(178.36deg, rgba(255, 255, 255, 0.4) -2.43%, rgba(255, 255, 255, 0.1) 105.08%);
-  /* backdrop-filter: blur(100px); */
+  background: linear-gradient(178.36deg, #D6D7F3 -2.43%, #D3CAF3 105.08%);
 }

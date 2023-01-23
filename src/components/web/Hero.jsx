@@ -1,6 +1,6 @@
 function Hero() {
   return (
-    <section className="headerbg px-2 h-[120vh] border-b-2 border-solid border-[#034EA2]">
+    <section className="headerbg px-2 h-[120vh]">
       <div className="container mx-auto">
         {/* hero text */}
         <div className="grid md:grid-cols-3 justify-between pt-28 pb-8">

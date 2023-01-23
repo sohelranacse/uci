@@ -1,23 +1,41 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 function Nav() {
+  const [nav, setNav] = useState(false);
+
+  const handleNav = () => {
+    console.log(nav);
+    setNav(!nav);
+    console.log(nav);
+  };
   return (
     <header className="headerbg px-2 border-b border-solid border-[#034EA2]">
       <nav className="container mx-auto">
         <div className="flex flex-wrap justify-between py-[17px]">
-          <Link className="nav-link h-[60px] w-[158px] inline-block" to="/">
+          <Link
+            className="nav-link md:h-[60px] w-[70px] md:w-[158px] inline-block"
+            to="/"
+          >
             <img src="logo.png" alt="logo" />
           </Link>
 
-          <div className="uppercase font-[700] text-[13px]">
+          <div className="hidden md:block uppercase font-[700] text-[13px]">
             <ul className="flex justify-end gap-6">
               <li>
-                <Link className="nav-link text-[#EE3129]" to="/">
+                <Link
+                  className="nav-link text-[#EE3129] hover:text-[#034EA2] ease-linear duration-300"
+                  to="/"
+                >
                   Career
                 </Link>
               </li>
               <li>
-                <Link className="nav-link text-[#EE3129]" to="/about">
+                <Link
+                  className="nav-link text-[#EE3129] hover:text-[#034EA2] ease-linear duration-300"
+                  to="/about"
+                >
                   Gallery
                 </Link>
               </li>
@@ -33,37 +51,131 @@ function Nav() {
 
             <ul className="flex justify-between gap-6 text-[#034EA2] mt-4">
               <li>
-                <Link className="nav-link text-[#EE3129]" to="/">
+                <Link
+                  className="nav-link text-[#EE3129] hover:text-[#034EA2] ease-linear duration-300"
+                  to="/"
+                >
                   Home
                 </Link>
               </li>
               <li>
-                <Link className="nav-link" to="/about">
+                <Link
+                  className="nav-link hover:text-[#EE3129] ease-linear duration-300"
+                  to="/about"
+                >
                   About
                 </Link>
               </li>
               <li>
-                <Link className="nav-link" to="/about">
+                <Link
+                  className="nav-link hover:text-[#EE3129] ease-linear duration-300"
+                  to="/about"
+                >
                   Active Group
                 </Link>
               </li>
               <li>
-                <Link className="nav-link" to="/about">
+                <Link
+                  className="nav-link hover:text-[#EE3129] ease-linear duration-300"
+                  to="/about"
+                >
                   Project
                 </Link>
               </li>
               <li>
-                <Link className="nav-link" to="/about">
+                <Link
+                  className="nav-link hover:text-[#EE3129] ease-linear duration-300"
+                  to="/about"
+                >
                   Social Activities
                 </Link>
               </li>
               <li>
-                <Link className="nav-link" to="/about">
+                <Link
+                  className="nav-link hover:text-[#EE3129] ease-linear duration-300"
+                  to="/about"
+                >
                   Contact
                 </Link>
               </li>
             </ul>
           </div>
+
+          {/* mobile nav */}
+          <div onClick={handleNav} className="block sm:hidden z-10">
+            {nav ? (
+              <AiOutlineClose size={25} className="text-white" />
+            ) : (
+              <AiOutlineMenu size={25} className="text-[#034EA2]" />
+            )}
+          </div>
+          <div
+            className={
+              nav
+                ? "sm:hidden fixed top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-[#034EA2] text-center ease-in duration-300 uppercase"
+                : "sm:hidden fixed top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-[#034EA2] text-center ease-in duration-300 uppercase"
+            }
+          >
+            <ul className="font-[700]">
+              <li
+                className="hover:text-[#EE3129] py-4 text-slate-50"
+                onClick={handleNav}
+              >
+                <Link className="text-2xl" to="/">
+                  Home
+                </Link>
+              </li>
+              <li
+                className="hover:text-[#EE3129] p-4 text-slate-50"
+                onClick={handleNav}
+              >
+                <Link className="text-2xl" to="/about">
+                  About
+                </Link>
+              </li>
+              <li
+                className="hover:text-[#EE3129] p-4 text-slate-50"
+                onClick={handleNav}
+              >
+                <Link className="text-2xl" to="/">
+                  Active Group
+                </Link>
+              </li>
+              <li
+                className="hover:text-[#EE3129] p-4 text-slate-50"
+                onClick={handleNav}
+              >
+                <Link className="text-2xl" to="/articles">
+                  Project
+                </Link>
+              </li>
+              <li
+                className="hover:text-[#EE3129] p-4 text-slate-50"
+                onClick={handleNav}
+              >
+                <Link className="text-2xl" to="/">
+                  News & Media
+                </Link>
+              </li>
+              <li
+                className="hover:text-[#EE3129] p-4 text-slate-50"
+                onClick={handleNav}
+              >
+                <Link className="text-2xl" to="/about">
+                  Social Activities
+                </Link>
+              </li>
+              <li
+                className="hover:text-[#EE3129] p-4 text-slate-50"
+                onClick={handleNav}
+              >
+                <Link className="text-2xl" to="/about">
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+          {/* mobile nav end */}
         </div>
       </nav>
     </header>
