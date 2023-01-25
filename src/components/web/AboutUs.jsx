@@ -1,4 +1,5 @@
 import { BsArrowRight } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 function AboutUs() {
   return (
@@ -21,12 +22,12 @@ function AboutUs() {
               passage, and going through the cites of the word in classical
               literature, discovered the undoubtable source.
             </p>
-            <a
-              href="/"
+            <Link
+              to="/"
               className="text-[#006AB6] text-[20px] font-[600] py-4 flex gap-2 leading-[20px] hover:text-[#EE3129] ease-linear duration-300"
             >
               Learn More <BsArrowRight />
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -43,12 +44,12 @@ function AboutUs() {
                 the majority have suffered alteration in some form, by injected
                 humour.
               </p>
-              <a
-                href="/"
+              <Link
+                to="/"
                 className="text-[#006AB6] text-[20px] font-[600] py-2 flex gap-2 leading-[20px] hover:text-[#EE3129] ease-linear duration-300"
               >
                 Learn More <BsArrowRight />
-              </a>
+              </Link>
             </div>
             <div>
               <h1 className="text-[#006AB6] text-[40px] leading-[29px] font-[600] py-3">
@@ -59,12 +60,12 @@ function AboutUs() {
                 the majority have suffered alteration in some form, by injected
                 humour.
               </p>
-              <a
-                href="/"
+              <Link
+                to="/"
                 className="text-[#006AB6] text-[20px] font-[600] py-2 flex gap-2 leading-[20px] hover:text-[#EE3129] ease-linear duration-300"
               >
                 Learn More <BsArrowRight />
-              </a>
+              </Link>
             </div>
           </div>
           <div>
@@ -80,12 +81,12 @@ function AboutUs() {
               passage, and going through the cites of the word in classical
               literature, discovered the undoubtable source.
             </p>
-            <a
-              href="/"
+            <Link
+              to="/"
               className="text-[#006AB6] text-[20px] font-[600] py-4 flex gap-2 leading-[20px] hover:text-[#EE3129] ease-linear duration-300"
             >
               Learn More <BsArrowRight />
-            </a>
+            </Link>
             <div className="mt-[103px]">
               <img src="./about-us/Rectangle 15.jpg" alt="img" />
             </div>

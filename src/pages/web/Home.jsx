@@ -6,6 +6,7 @@ import NewsMedia from "../../components/web/NewsMedia";
 import Team from "../../components/web/Team";
 import CompanyVideo from "../../components/web/CompanyVideo";
 import MiniStatics from "../../components/web/MiniStatics";
+import LetsGo from "../../components/web/LetsGo";
 
 function Home() {
   return (
@@ -20,6 +21,7 @@ function Home() {
       <Team />
       <CompanyVideo />
       <MiniStatics />
+      <LetsGo />
     </>
   );
 }
