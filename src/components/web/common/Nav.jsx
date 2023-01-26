@@ -5,6 +5,7 @@ import { FaSearch } from "react-icons/fa";
 
 function Nav() {
   const [nav, setNav] = useState(false);
+  const [seachActive, setseachActive] = useState(false);
 
   const handleNav = () => {
     if (nav) document.querySelector("html").style.overflow = "";
@@ -14,6 +15,11 @@ function Nav() {
     setNav(!nav);
     // console.log(nav);
   };
+
+  const handleSearch = () => {
+    setseachActive(true);
+  };
+
   return (
     <header className="headerbg px-2 border-b border-solid border-[#034EA2]">
       <nav className="container mx-auto">
@@ -44,12 +50,30 @@ function Nav() {
                 </Link>
               </li>
               <li>
-                <button
-                  type="button"
-                  className="uppercase text-center font-[400] text-[9px] text-[#EE3129] rounded-sm py-1 px-6 border border-[#EE3129] hover:text-[#fff] hover:border-[#034EA2] hover:bg-[#034EA2] ease-linear duration-300"
-                >
-                  Search
-                </button>
+                {seachActive ? (
+                  <form className="inline-flex h-[25px]">
+                    <input
+                      type="text"
+                      placeholder="keywords"
+                      className="h-full w-full pl-2"
+                      required
+                    />
+                    <button
+                      type="submit"
+                      className="text-white bg-[#EE3129] font-[600] text-sm h-full px-4"
+                    >
+                      <FaSearch />
+                    </button>
+                  </form>
+                ) : (
+                  <button
+                    type="button"
+                    className="uppercase text-center font-[400] text-[9px] text-[#EE3129] rounded-sm py-1 px-6 border border-[#EE3129] hover:text-[#fff] hover:border-[#034EA2] hover:bg-[#034EA2] ease-linear duration-300"
+                    onClick={handleSearch}
+                  >
+                    Search
+                  </button>
+                )}
               </li>
             </ul>
 
@@ -124,7 +148,7 @@ function Nav() {
                 : "sm:hidden fixed top-0 left-[-100%] right-0 bottom-0 z-[2] w-full h-screen bg-[#034EA2] text-center ease-in duration-300 uppercase"
             }
           >
-            <div className="flex justify-center py-12">
+            <div className="flex justify-center py-16">
               <ul className="font-[700]">
                 <li
                   className="hover:text-[#EE3129] py-2 text-slate-50"
@@ -202,7 +226,7 @@ function Nav() {
             </div>
 
             {/* search */}
-            <div className="h-10 inline-flex w-full px-4">
+            <form className="h-10 inline-flex w-full px-4">
               <input
                 type="text"
                 placeholder="keywords"
@@ -215,7 +239,7 @@ function Nav() {
               >
                 <FaSearch />
               </button>
-            </div>
+            </form>
           </div>
           {/* mobile nav end */}
         </div>

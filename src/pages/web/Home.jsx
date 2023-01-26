@@ -14,14 +14,16 @@ function Home() {
       <Helmet>
         <title>UCI International</title>
       </Helmet>
-      <Hero />
-      <AboutUs />
-      <Experience />
-      <NewsMedia />
-      <Team />
-      <CompanyVideo />
-      <MiniStatics />
-      <LetsGo />
+      <>
+        <Hero />
+        <AboutUs />
+        <Experience />
+        <NewsMedia />
+        <Team />
+        <CompanyVideo />
+        <MiniStatics />
+        <LetsGo />
+      </>
     </>
   );
 }

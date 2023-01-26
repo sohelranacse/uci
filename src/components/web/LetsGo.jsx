@@ -1,5 +1,3 @@
-import React from "react";
-
 function LetsGo() {
   return (
     <section className="bg-[#034EA2] px-2">
