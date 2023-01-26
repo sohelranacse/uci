@@ -2,7 +2,8 @@ function Experience() {
   return (
     <section
       style={{
-        background: "url('./about-us/experience-bg.png')",
+        background: "url('./images/experience-bg.png')",
+        backgroundAttachment: "fixed",
       }}
     >
       <div
@@ -12,7 +13,7 @@ function Experience() {
         }}
       >
         <div className="container mx-auto items-center text-center">
-          <h1 className="text-[106px] leading-[136px] py-[180px]">
+          <h1 className="text-5xl md:text-[106px] leading-[80px] md:leading-[136px] py-32 md:py-[180px]">
             <span className="text-white">Experience the Passion of</span>{" "}
             <span className="text-[#006AB6]">Unity Mind</span>
           </h1>

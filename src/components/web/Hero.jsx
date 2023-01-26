@@ -1,10 +1,16 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import { Navigation } from "swiper";
+
 function Hero() {
   return (
-    <section className="headerbg px-2 h-[120vh]">
+    <section className="headerbg px-2 md:h-[120vh]">
       <div className="container mx-auto">
         {/* hero text */}
-        <div className="grid md:grid-cols-3 justify-between pt-28 pb-8">
-          <h1 className="col-span-2 text-[#EE3129] text-[75px] leading-[91px]">
+        <div className="grid md:grid-cols-3 justify-between pt-12 md:pt-28 pb-8">
+          <h1 className="col-span-2 text-[#EE3129] text-4xl leading-[50px] md:text-[75px] md:leading-[91px]">
             Dreams and Teams Work{" "}
             <span className="text-[#034EA2]">Together</span>, We Build Team
           </h1>
@@ -22,24 +28,39 @@ function Hero() {
             </button>
           </div>
         </div>
+
         {/* slider */}
-        <div className="py-4 grid grid-cols-7 gap-6 justify-between">
+        <div className="hidden py-4 md:grid grid-cols-7 gap-6 justify-between">
           <img
             className="col-span-3"
-            src="./slider/Rectangle 9.png"
+            src="./images/slider/Rectangle 9.png"
             alt="slider 1"
           />
           <img
-            className="col-span-2 pt-28"
-            src="./slider/Rectangle 10.png"
+            className="col-span-2 md:pt-28"
+            src="./images/slider/Rectangle 10.png"
             alt="slider 2"
           />
           <img
             className="col-span-2"
-            src="./slider/Rectangle 11.png"
+            src="./images/slider/Rectangle 11.png"
             alt="slider 3"
           />
         </div>
+
+        {/* mobile slider */}
+        <Swiper
+          navigation={true}
+          modules={[Navigation]}
+          className="mySwiper md:hidden"
+        >
+          <SwiperSlide>
+            <img src="./images/slider/Rectangle 10.png" alt="slider 2" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src="./images/slider/Rectangle 11.png" alt="slider 3" />
+          </SwiperSlide>
+        </Swiper>
       </div>
     </section>
   );

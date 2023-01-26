@@ -6,7 +6,7 @@ function LetsGo() {
       <div className="container mx-auto md:flex flex-grap gap-2">
         {/* left */}
         <div className="text-white py-[79px]">
-          <h1 className="pt-[72px] text-[64px] leading-6-[75px]">
+          <h1 className="pt-[72px] text-5xl md:text-[64px] leading-6-[75px]">
             Hello World! <br />
             <span className="italic">Let's Go!</span>
           </h1>
@@ -25,7 +25,7 @@ function LetsGo() {
         </div>
         {/* right */}
         <img
-          src="./about-us/world.png"
+          src="./images/world.png"
           alt="world images"
           className="md:py-[79px]"
         />

@@ -12,15 +12,15 @@ function Footer() {
       <div
         className="px-2"
         style={{
-          background: "url('./about-us/footer-bg.png')",
+          background: "url('./images/footer-bg.png')",
         }}
       >
         <div className="container mx-auto grid md:grid-cols-2 pt-[107px] pb-[74px] gap-8">
           <div className="text-white justify-start">
             <img
-              src="./about-us/footer-logo.png"
+              src="./images/footer-logo.png"
               alt="logo"
-              className="w-[265px]"
+              className="w-[200px] md:w-[265px]"
             />
             <p className="font-[600] text-[20px] leading-[29px] pt-[36px] pb-[23px]">
               There are many variations of passages of Lorem Ipsum available,
@@ -67,11 +67,11 @@ function Footer() {
 
           {/* right */}
           <form className="md:text-right pt-[36px]">
-            <div className="h-[66px] inline-flex w-[80%]">
+            <div className="h-[66px] inline-flex w-full md:w-[80%]">
               <input
                 type="email"
                 placeholder="Email"
-                className="h-full bg-[#D9D9D9] md:w-[80%] pl-2"
+                className="h-full bg-[#D9D9D9] w-full md:w-[80%] pl-2"
                 required
               />
               <button

@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 
 function AboutUs() {
   return (
-    <section className="AboutUsbg px-2 pt-80 pb-28">
+    <section className="AboutUsbg px-2 pt-16 md:pt-80 pb-28">
       <div className="container mx-auto">
-        <div className="grid grid-cols-2 gap-8">
+        <div className="md:grid grid-cols-2 gap-8">
           <div className="flex justify-end">
-            <img src="./about-us/Rectangle 13.jpg" alt="img" />
+            <img src="./images/about-us/Rectangle 13.jpg" alt="img" />
           </div>
           <div>
-            <h1 className="text-[#006AB6] text-[64px] leading-[75px]">
+            <h1 className="text-[#006AB6] py-4 md:py-0 text-5xl md:text-[64px] leading-[75px]">
               About Us
             </h1>
             <p className="text-[20px] leading-[29px]">
@@ -32,9 +32,9 @@ function AboutUs() {
         </div>
 
         {/* story */}
-        <div className="grid grid-cols-2 gap-8">
+        <div className="md:grid grid-cols-2 gap-8">
           <div className="mt-20">
-            <img src="./about-us/Rectangle 14.jpg" alt="img" />
+            <img src="./images/about-us/Rectangle 14.jpg" alt="img" />
             <div className="pt-8 pb-4">
               <h1 className="text-[#006AB6] text-[40px] leading-[29px] font-[600] py-3">
                 Our Mission
@@ -69,7 +69,7 @@ function AboutUs() {
             </div>
           </div>
           <div>
-            <h1 className="text-[#006AB6] text-[64px] leading-[75px]">
+            <h1 className="text-[#006AB6] text-5xl py-4 md:py-0 md:text-[64px] leading-[75px]">
               Our Story
             </h1>
             <p className="text-[20px] leading-[29px]">
@@ -88,7 +88,7 @@ function AboutUs() {
               Learn More <BsArrowRight />
             </Link>
             <div className="mt-[103px]">
-              <img src="./about-us/Rectangle 15.jpg" alt="img" />
+              <img src="./images/about-us/Rectangle 15.jpg" alt="img" />
             </div>
           </div>
         </div>

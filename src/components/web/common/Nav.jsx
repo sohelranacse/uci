@@ -1,14 +1,15 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { FaSearch } from "react-icons/fa";
 
 function Nav() {
   const [nav, setNav] = useState(false);
 
   const handleNav = () => {
-    console.log(nav);
+    // console.log(nav);
     setNav(!nav);
-    console.log(nav);
+    // console.log(nav);
   };
   return (
     <header className="headerbg px-2 border-b border-solid border-[#034EA2]">
@@ -102,78 +103,128 @@ function Nav() {
           </div>
 
           {/* mobile nav */}
-          <div onClick={handleNav} className="block sm:hidden z-10">
+          <div
+            onClick={handleNav}
+            className="block sm:hidden z-10 cursor-pointer"
+          >
             {nav ? (
-              <AiOutlineClose size={25} className="text-white" />
+              <AiOutlineClose
+                size={25}
+                className="text-white"
+                onClick={() =>
+                  (document.querySelector("html").style.overflow = "")
+                }
+              />
             ) : (
-              <AiOutlineMenu size={25} className="text-[#034EA2]" />
+              <AiOutlineMenu
+                size={25}
+                className="text-[#034EA2]"
+                onClick={() =>
+                  (document.querySelector("html").style.overflow = "hidden")
+                }
+              />
             )}
           </div>
+
           <div
             className={
               nav
-                ? "sm:hidden fixed top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-[#034EA2] text-center ease-in duration-300 uppercase"
-                : "sm:hidden fixed top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-[#034EA2] text-center ease-in duration-300 uppercase"
+                ? "sm:hidden fixed top-0 left-0 right-0 bottom-0 z-[2] w-full h-screen bg-[#034EA2] text-center ease-in duration-300 uppercase"
+                : "sm:hidden fixed top-0 left-[-100%] right-0 bottom-0 z-[2] w-full h-screen bg-[#034EA2] text-center ease-in duration-300 uppercase"
             }
           >
-            <ul className="font-[700]">
-              <li
-                className="hover:text-[#EE3129] py-4 text-slate-50"
-                onClick={handleNav}
+            <div className="flex justify-center py-12">
+              <ul className="font-[700]">
+                <li
+                  className="hover:text-[#EE3129] py-2 text-slate-50"
+                  onClick={handleNav}
+                >
+                  <Link className="text-2xl" to="/">
+                    Home
+                  </Link>
+                </li>
+                <li
+                  className="hover:text-[#EE3129] py-2 text-slate-50"
+                  onClick={handleNav}
+                >
+                  <Link className="text-2xl" to="/about">
+                    About
+                  </Link>
+                </li>
+                <li
+                  className="hover:text-[#EE3129] py-2 text-slate-50"
+                  onClick={handleNav}
+                >
+                  <Link className="text-2xl" to="/">
+                    Active Group
+                  </Link>
+                </li>
+                <li
+                  className="hover:text-[#EE3129] py-2 text-slate-50"
+                  onClick={handleNav}
+                >
+                  <Link className="text-2xl" to="/articles">
+                    Project
+                  </Link>
+                </li>
+                <li
+                  className="hover:text-[#EE3129] py-2 text-slate-50"
+                  onClick={handleNav}
+                >
+                  <Link className="text-2xl" to="/">
+                    News & Media
+                  </Link>
+                </li>
+                <li
+                  className="hover:text-[#EE3129] py-2 text-slate-50"
+                  onClick={handleNav}
+                >
+                  <Link className="text-2xl" to="/about">
+                    Social Activities
+                  </Link>
+                </li>
+                <li
+                  className="hover:text-[#EE3129] py-2 text-slate-50"
+                  onClick={handleNav}
+                >
+                  <Link className="text-2xl" to="/about">
+                    Contact
+                  </Link>
+                </li>
+                <li
+                  className="hover:text-[#EE3129] py-2 text-slate-50"
+                  onClick={handleNav}
+                >
+                  <Link className="text-2xl" to="/about">
+                    Career
+                  </Link>
+                </li>
+                <li
+                  className="hover:text-[#EE3129] py-2 text-slate-50"
+                  onClick={handleNav}
+                >
+                  <Link className="text-2xl" to="/about">
+                    Gallery
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* search */}
+            <div className="h-10 inline-flex w-full px-4">
+              <input
+                type="text"
+                placeholder="keywords"
+                className="h-full w-full pl-2"
+                required
+              />
+              <button
+                type="submit"
+                className="text-white bg-[#EE3129] font-[600] text-[20px] leading-[29px] h-full px-4"
               >
-                <Link className="text-2xl" to="/">
-                  Home
-                </Link>
-              </li>
-              <li
-                className="hover:text-[#EE3129] p-4 text-slate-50"
-                onClick={handleNav}
-              >
-                <Link className="text-2xl" to="/about">
-                  About
-                </Link>
-              </li>
-              <li
-                className="hover:text-[#EE3129] p-4 text-slate-50"
-                onClick={handleNav}
-              >
-                <Link className="text-2xl" to="/">
-                  Active Group
-                </Link>
-              </li>
-              <li
-                className="hover:text-[#EE3129] p-4 text-slate-50"
-                onClick={handleNav}
-              >
-                <Link className="text-2xl" to="/articles">
-                  Project
-                </Link>
-              </li>
-              <li
-                className="hover:text-[#EE3129] p-4 text-slate-50"
-                onClick={handleNav}
-              >
-                <Link className="text-2xl" to="/">
-                  News & Media
-                </Link>
-              </li>
-              <li
-                className="hover:text-[#EE3129] p-4 text-slate-50"
-                onClick={handleNav}
-              >
-                <Link className="text-2xl" to="/about">
-                  Social Activities
-                </Link>
-              </li>
-              <li
-                className="hover:text-[#EE3129] p-4 text-slate-50"
-                onClick={handleNav}
-              >
-                <Link className="text-2xl" to="/about">
-                  Contact
-                </Link>
-              </li>
-            </ul>
+                <FaSearch />
+              </button>
+            </div>
           </div>
           {/* mobile nav end */}
         </div>

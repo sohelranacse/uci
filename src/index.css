@@ -30,6 +30,10 @@ a {
   font-family: 'Jaldi', sans-serif;
 }
 .teamBg {
-  background: url('../public/team/team-bg.png');
+  background: url('../public/images/team-bg.png');
   backdrop-filter: blur(100px);
+}
+.videoBg {
+  background: url('../public/images/video-bg.png');
+  background-repeat: no-repeat;
 }
