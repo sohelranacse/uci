@@ -7,6 +7,9 @@ function Nav() {
   const [nav, setNav] = useState(false);
 
   const handleNav = () => {
+    if (nav) document.querySelector("html").style.overflow = "";
+    else document.querySelector("html").style.overflow = "hidden";
+
     // console.log(nav);
     setNav(!nav);
     // console.log(nav);
@@ -108,21 +111,9 @@ function Nav() {
             className="block sm:hidden z-10 cursor-pointer"
           >
             {nav ? (
-              <AiOutlineClose
-                size={25}
-                className="text-white"
-                onClick={() =>
-                  (document.querySelector("html").style.overflow = "")
-                }
-              />
+              <AiOutlineClose size={25} className="text-white" />
             ) : (
-              <AiOutlineMenu
-                size={25}
-                className="text-[#034EA2]"
-                onClick={() =>
-                  (document.querySelector("html").style.overflow = "hidden")
-                }
-              />
+              <AiOutlineMenu size={25} className="text-[#034EA2]" />
             )}
           </div>
 
