@@ -32,7 +32,7 @@ function Footer() {
             <ul className="md:flex flex-wrap gap-x-20 gap-y-4">
               <li>
                 <Link
-                  to="/"
+                  to="/about"
                   className="font-[700] text-[20px] leading-[29px] hover:text-[#034EA2] ease-linear duration-200"
                 >
                   Privacy Policy

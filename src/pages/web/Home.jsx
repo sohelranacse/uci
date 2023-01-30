@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet";
-import Hero from "../../components/web/Hero";
+import HeroSlider from "../../components/web/HeroSlider";
 import AboutUs from "../../components/web/AboutUs";
 import Experience from "../../components/web/Experience";
 import NewsMedia from "../../components/web/NewsMedia";
@@ -15,7 +15,7 @@ function Home() {
         <title>UCI International</title>
       </Helmet>
       <>
-        <Hero />
+        <HeroSlider />
         <AboutUs />
         <Experience />
         <NewsMedia />

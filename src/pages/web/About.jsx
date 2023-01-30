@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet";
-import Hero from "../../components/web/Hero";
+import AboutHero from "../../components/web/AboutHero";
 import Team from "../../components/web/Team";
 import CompanyVideo from "../../components/web/CompanyVideo";
 
@@ -10,10 +10,11 @@ function About() {
         <title>About | UCI International</title>
       </Helmet>
 
-      <Hero />
+      <AboutHero />
 
       <Team />
       <CompanyVideo />
+      <div className="AboutUsbg py-14"></div>
     </>
   );
 }

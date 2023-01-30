@@ -19,14 +19,14 @@ function Team() {
 
         {/* member */}
         <div className="md:grid grid-cols-3 gap-[30px] text-[#58595B] md:pb-12">
-          <div className="py-4 md:py-0">
+          <div className="py-5 md:py-0">
             <img src="./images/team/member-1.png" alt="member" />
             <h3 className="text-[30px] leading-[29px] pt-[21px]">Sajib Paul</h3>
             <p className="py-2 font-[600] text-[20px] leading-[29px]">
               CEO & Founder
             </p>
           </div>
-          <div className="py-4 md:py-0">
+          <div className="py-5 md:py-0">
             <img src="./images/team/member-2.png" alt="member" />
             <h3 className="text-[30px] leading-[29px] pt-[21px]">
               Tasnim Jahan
@@ -35,7 +35,7 @@ function Team() {
               Director
             </p>
           </div>
-          <div className="py-4 md:py-0">
+          <div className="py-5 md:py-0">
             <img src="./images/team/member-3.png" alt="member" />
             <h3 className="text-[30px] leading-[29px] pt-[21px]">
               Zara jesmin
@@ -44,7 +44,7 @@ function Team() {
               Accountant
             </p>
           </div>
-          <div className="py-4 md:py-0">
+          <div className="py-5 md:py-0">
             <img src="./images/team/member-4.png" alt="member" />
             <h3 className="text-[30px] leading-[29px] pt-[21px]">
               Mehejabin Khan
@@ -53,7 +53,7 @@ function Team() {
               Business Development
             </p>
           </div>
-          <div className="py-4 md:py-0">
+          <div className="py-5 md:py-0">
             <img src="./images/team/member-5.png" alt="member" />
             <h3 className="text-[30px] leading-[29px] pt-[21px]">
               Eiahia Sohel
@@ -62,7 +62,7 @@ function Team() {
               Marketing
             </p>
           </div>
-          <div className="py-4 md:py-0">
+          <div className="py-5 md:py-0">
             <img src="./images/team/member-6.png" alt="member" />
             <h3 className="text-[30px] leading-[29px] pt-[21px]">Payel Das</h3>
             <p className="py-2 font-[600] text-[20px] leading-[29px]">
