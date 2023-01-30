@@ -75,20 +75,3 @@ a {
     transform: rotate(360deg);
   }
 }
-
-/* scroll to top */
-/* .scroll-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #333;
-  color: #fff;
-  padding: 10px 15px;
-  border-radius: 50%;
-  cursor: pointer;
-  display: none;
-}
-
-.scroll-to-top i {
-  font-size: 20px;
-} */

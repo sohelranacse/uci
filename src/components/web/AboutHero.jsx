@@ -27,7 +27,7 @@ function AboutHero() {
               <img src="./images/about-slider/1.png" alt="slider 1" />
             </SwiperSlide>
             <SwiperSlide>
-              <img src="./images/about-slider/1.png" alt="slider 2" />
+              <img src="./images/about-slider/2.png" alt="slider 2" />
             </SwiperSlide>
           </Swiper>
         </div>

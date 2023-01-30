@@ -1,6 +1,6 @@
 import React from "react";
 
-function Team() {
+function TeamSection() {
   return (
     <section className="teamBg px-2">
       <div className="container mx-auto py-16">
@@ -75,4 +75,4 @@ function Team() {
   );
 }
 
-export default Team;
+export default TeamSection;

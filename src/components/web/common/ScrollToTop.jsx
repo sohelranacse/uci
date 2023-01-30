@@ -26,7 +26,7 @@ const ScrollToTop = () => {
   return (
     <button
       onClick={handleClick}
-      className="scroll-to-top bg-[#034EA2] text-white fixed bottom-5 right-5 rounded-full inline-block w-[60px] h-[60px] hover:bg-[#EE3129] ease-linear duration-300"
+      className="scroll-to-top bg-[#034EA2] text-white fixed bottom-5 right-5 rounded-full inline-block w-[50px] h-[50px] hover:bg-[#EE3129] ease-linear duration-300"
     >
       <FaArrowAltCircleUp className="inline-block text-2xl" />
     </button>

@@ -9,6 +9,8 @@ import About from './pages/web/About';
 import { useState, useEffect } from "react";
 import Loader from "./components/web/Loader";
 import ScrollToTop from "./components/web/common/ScrollToTop";
+import Team from "./pages/web/Team";
+import Group from "./pages/web/Group";
 
 const LinkScroll = () => {
   const { pathname } = useLocation()
@@ -42,6 +44,8 @@ function App() {
             <Route path="/" element={<Home />} />
 
             <Route path="/about" element={<About />} />
+            <Route path="/group" element={<Group />} />
+            <Route path="/team" element={<Team />} />
           </Routes>
           <Footer />
           <ScrollToTop />

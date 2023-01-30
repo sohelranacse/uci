@@ -68,7 +68,7 @@ function Nav() {
                 ) : (
                   <button
                     type="button"
-                    className="uppercase text-center font-[400] text-[9px] text-[#EE3129] rounded-sm py-1 px-6 border border-[#EE3129] hover:text-[#fff] hover:border-[#034EA2] hover:bg-[#034EA2] ease-linear duration-300"
+                    className="uppercase text-center font-[400] text-[10px] text-[#EE3129] rounded-sm py-1 px-6 border border-[#EE3129] hover:text-[#fff] hover:border-[#034EA2] hover:bg-[#034EA2] ease-linear duration-300"
                     onClick={handleSearch}
                   >
                     Search
@@ -97,7 +97,7 @@ function Nav() {
               <li>
                 <Link
                   className="nav-link hover:text-[#EE3129] ease-linear duration-300"
-                  to="/about"
+                  to="/group"
                 >
                   Active Group
                 </Link>
@@ -105,7 +105,7 @@ function Nav() {
               <li>
                 <Link
                   className="nav-link hover:text-[#EE3129] ease-linear duration-300"
-                  to="/about"
+                  to="/"
                 >
                   Project
                 </Link>
@@ -113,7 +113,15 @@ function Nav() {
               <li>
                 <Link
                   className="nav-link hover:text-[#EE3129] ease-linear duration-300"
-                  to="/about"
+                  to="/team"
+                >
+                  Team
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="nav-link hover:text-[#EE3129] ease-linear duration-300"
+                  to="/"
                 >
                   Social Activities
                 </Link>
@@ -121,7 +129,7 @@ function Nav() {
               <li>
                 <Link
                   className="nav-link hover:text-[#EE3129] ease-linear duration-300"
-                  to="/about"
+                  to="/"
                 >
                   Contact
                 </Link>
@@ -170,7 +178,7 @@ function Nav() {
                   className="hover:text-[#EE3129] py-2 text-slate-50"
                   onClick={handleNav}
                 >
-                  <Link className="text-2xl" to="/">
+                  <Link className="text-2xl" to="/group">
                     Active Group
                   </Link>
                 </li>
@@ -178,8 +186,16 @@ function Nav() {
                   className="hover:text-[#EE3129] py-2 text-slate-50"
                   onClick={handleNav}
                 >
-                  <Link className="text-2xl" to="/articles">
+                  <Link className="text-2xl" to="/">
                     Project
+                  </Link>
+                </li>
+                <li
+                  className="hover:text-[#EE3129] py-2 text-slate-50"
+                  onClick={handleNav}
+                >
+                  <Link className="text-2xl" to="/team">
+                    Team
                   </Link>
                 </li>
                 <li
