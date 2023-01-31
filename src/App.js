@@ -50,7 +50,8 @@ function App() {
 
             {/* 404 */}
             {/* <Route path="*" element={<Navigate to="/notfound" />} /> */}
-            <Route path="*" element={<NotFound />} />
+            {/* <Route path="*" element={<NotFound />} /> */}
+            <Route path="*" element={<Home />} />
           </Routes>
           <Footer />
           <ScrollToTop />
