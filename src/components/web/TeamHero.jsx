@@ -19,9 +19,9 @@ function TeamHero() {
           <img src="./images/about-slider/2.png" alt="images 2" />
         </div>
 
-        <div className="md:grid grid-cols-2 py-[107px] gap-9">
+        <div className="md:grid grid-cols-2 py-10 md:py-[107px] gap-9">
           <div>
-            <h2 className="text-[65px] text-[#006AB6] leading-[75px]">
+            <h2 className="text-5xl md:text-[65px] text-[#006AB6] leading-[75px]">
               Our Team
             </h2>
             <p className="font-[400] text-[20px] leading-[29px] text-[#000000] py-1">

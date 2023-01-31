@@ -13,15 +13,15 @@ function GroupPost({
   authorDesc,
 }) {
   return (
-    <div className="md:grid grid-cols-12 py-14">
+    <div className="md:grid grid-cols-12 py-6 md:py-14">
       <div className="col-span-8">
         <img src={image} alt="post 1" />
         <div className="md:grid grid-cols-12">
           <div className="col-start-3 col-span-10 mt-[-28px]">
-            <span className="text-[24px] text-white font-[700] text-center leading-[28.18px] py-4 px-12 bg-[#EE3129] inline-block">
+            <span className="text-[24px] text-white font-[700] text-center leading-[28.18px] py-2 md:py-4 px-8 md:px-12 bg-[#EE3129] inline-block">
               {tag}
             </span>
-            <h2 className="text-[#006AB6] text-[38px] leading-[44px] pt-[22px]">
+            <h2 className="text-[#006AB6] text-3xl md:text-[38px] md:leading-[44px] pt-[22px]">
               {title}
             </h2>
             <p className="border-b border-[#006AB6] pt-4 pb-[27px] text-[20px] leading-[29px] text-[#68696A]">
@@ -43,14 +43,14 @@ function GroupPost({
           </div>
         </div>
       </div>
-      <div className="col-span-4 text-center">
+      <div className="col-span-4 md:text-center">
         <h2 className="text-[#006AB6] text-[30px] leading-[35px]">
           About Group
         </h2>
         <img
           src={authorImg}
           alt="author 1"
-          className="pt-[18px] pb-[14px] mx-auto"
+          className="pt-[18px] pb-[14px] md:mx-auto"
         />
         <h3 className="text-[#006AB6] text-[20px] leading-[23px]">{author}</h3>
         <p className="text-[17px] leading-[29px] text-[#68696A] py-3">

@@ -69,7 +69,7 @@ function AboutUs() {
             </div>
           </div>
           <div>
-            <h1 className="text-[#006AB6] text-5xl py-4 md:py-0 md:text-[64px] leading-[75px]">
+            <h1 className="text-[#006AB6] text-5xl pt-6 pb-3 md:pb-0 md:pt-0 md:text-[64px] md:leading-[75px]">
               Our Story
             </h1>
             <p className="text-[20px] leading-[29px]">
@@ -87,7 +87,7 @@ function AboutUs() {
             >
               Learn More <BsArrowRight />
             </Link>
-            <div className="mt-[103px]">
+            <div className="md:mt-[103px]">
               <img src="./images/about-us/Rectangle 15.jpg" alt="img" />
             </div>
           </div>

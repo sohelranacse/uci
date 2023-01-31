@@ -1,4 +1,4 @@
-import { Route, Routes, useLocation } from "react-router-dom"
+import { Route, Routes, useLocation, Navigate } from "react-router-dom"
 
 import Nav from './components/web/common/Nav';
 import Footer from './components/web/common/Footer';
@@ -11,6 +11,7 @@ import Loader from "./components/web/Loader";
 import ScrollToTop from "./components/web/common/ScrollToTop";
 import Team from "./pages/web/Team";
 import Group from "./pages/web/Group";
+import NotFound from "./pages/web/NotFound";
 
 const LinkScroll = () => {
   const { pathname } = useLocation()
@@ -46,6 +47,10 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/group" element={<Group />} />
             <Route path="/team" element={<Team />} />
+
+            {/* 404 */}
+            {/* <Route path="*" element={<Navigate to="/notfound" />} /> */}
+            <Route path="*" element={<NotFound />} />
           </Routes>
           <Footer />
           <ScrollToTop />

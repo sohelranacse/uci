@@ -20,8 +20,8 @@ function GroupHero() {
           <img src="./images/about-slider/2.png" alt="images 2" />
         </div>
 
-        <div className="py-[107px]">
-          <h1 className="text-[65px] text-[#006AB6] leading-[75px] text-center">
+        <div className="py-10 md:py-[107px]">
+          <h1 className="pb-4 md:pb-1 text-5xl md:text-[65px] text-[#006AB6] md:leading-[75px] text-center">
             Our Great Groups
           </h1>
           <p className="font-[400] text-[20px] leading-[29px] text-black pb-8 text-center">

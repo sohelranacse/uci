@@ -1,7 +1,50 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { FaSearch } from "react-icons/fa";
+
+const NavLink = ({ to, label, type }) => {
+  const location = useLocation();
+
+  if (type === "desktop") {
+    return (
+      <Link
+        className={
+          location.pathname === to
+            ? "nav-link text-[#EE3129] ease-linear duration-300"
+            : "nav-link text-[#034EA2] hover:text-[#EE3129] ease-linear duration-300"
+        }
+        to={to}
+      >
+        {label}
+      </Link>
+    );
+  } else if (type === "top") {
+    return (
+      <Link
+        className={
+          location.pathname === to
+            ? "nav-link text-[#034EA2] ease-linear duration-300"
+            : "nav-link text-[#EE3129] hover:text-[#034EA2] ease-linear duration-300"
+        }
+        to={to}
+      >
+        {label}
+      </Link>
+    );
+  } else {
+    return (
+      <Link
+        className={
+          location.pathname === to ? "text-[#EE3129] text-2xl" : "text-2xl"
+        }
+        to={to}
+      >
+        {label}
+      </Link>
+    );
+  }
+};
 
 function Nav() {
   const [nav, setNav] = useState(false);
@@ -34,20 +77,10 @@ function Nav() {
           <div className="hidden md:block uppercase font-[700] text-[13px]">
             <ul className="flex justify-end gap-6">
               <li>
-                <Link
-                  className="nav-link text-[#EE3129] hover:text-[#034EA2] ease-linear duration-300"
-                  to="/"
-                >
-                  Career
-                </Link>
+                <NavLink to="/career" label="Career" type="top" />
               </li>
               <li>
-                <Link
-                  className="nav-link text-[#EE3129] hover:text-[#034EA2] ease-linear duration-300"
-                  to="/about"
-                >
-                  Gallery
-                </Link>
+                <NavLink to="/gallery" label="Gallery" type="top" />
               </li>
               <li>
                 {seachActive ? (
@@ -79,60 +112,26 @@ function Nav() {
 
             <ul className="flex justify-between gap-6 text-[#034EA2] mt-4">
               <li>
-                <Link
-                  className="nav-link text-[#EE3129] hover:text-[#034EA2] ease-linear duration-300"
-                  to="/"
-                >
-                  Home
-                </Link>
+                <NavLink to="/" label="Home" type="desktop" />
               </li>
               <li>
-                <Link
-                  className="nav-link hover:text-[#EE3129] ease-linear duration-300"
-                  to="/about"
-                >
-                  About
-                </Link>
+                <NavLink to="/about" label="About" type="desktop" />
               </li>
               <li>
-                <Link
-                  className="nav-link hover:text-[#EE3129] ease-linear duration-300"
-                  to="/group"
-                >
-                  Active Group
-                </Link>
+                <NavLink to="/group" label="Active Group" type="desktop" />
               </li>
               <li>
-                <Link
-                  className="nav-link hover:text-[#EE3129] ease-linear duration-300"
-                  to="/"
-                >
-                  Project
-                </Link>
+                <NavLink to="/project" label="Project" type="desktop" />
               </li>
               <li>
-                <Link
-                  className="nav-link hover:text-[#EE3129] ease-linear duration-300"
-                  to="/team"
-                >
-                  Team
-                </Link>
+                <NavLink
+                  to="/social"
+                  label="Social Activities"
+                  type="desktop"
+                />
               </li>
               <li>
-                <Link
-                  className="nav-link hover:text-[#EE3129] ease-linear duration-300"
-                  to="/"
-                >
-                  Social Activities
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="nav-link hover:text-[#EE3129] ease-linear duration-300"
-                  to="/"
-                >
-                  Contact
-                </Link>
+                <NavLink to="/contact" label="Contact" type="desktop" />
               </li>
             </ul>
           </div>
@@ -162,81 +161,59 @@ function Nav() {
                   className="hover:text-[#EE3129] py-2 text-slate-50"
                   onClick={handleNav}
                 >
-                  <Link className="text-2xl" to="/">
-                    Home
-                  </Link>
+                  <NavLink to="/" label="Home" type="mobile" />
                 </li>
                 <li
                   className="hover:text-[#EE3129] py-2 text-slate-50"
                   onClick={handleNav}
                 >
-                  <Link className="text-2xl" to="/about">
-                    About
-                  </Link>
+                  <NavLink to="/about" label="About" type="mobile" />
                 </li>
                 <li
                   className="hover:text-[#EE3129] py-2 text-slate-50"
                   onClick={handleNav}
                 >
-                  <Link className="text-2xl" to="/group">
-                    Active Group
-                  </Link>
+                  <NavLink to="/group" label="Group" type="mobile" />
                 </li>
                 <li
                   className="hover:text-[#EE3129] py-2 text-slate-50"
                   onClick={handleNav}
                 >
-                  <Link className="text-2xl" to="/">
-                    Project
-                  </Link>
+                  <NavLink to="/project" label="Project" type="mobile" />
                 </li>
                 <li
                   className="hover:text-[#EE3129] py-2 text-slate-50"
                   onClick={handleNav}
                 >
-                  <Link className="text-2xl" to="/team">
-                    Team
-                  </Link>
+                  <NavLink to="/news" label="News & Media" type="mobile" />
                 </li>
                 <li
                   className="hover:text-[#EE3129] py-2 text-slate-50"
                   onClick={handleNav}
                 >
-                  <Link className="text-2xl" to="/">
-                    News & Media
-                  </Link>
+                  <NavLink
+                    to="/social"
+                    label="Social Activities"
+                    type="mobile"
+                  />
                 </li>
                 <li
                   className="hover:text-[#EE3129] py-2 text-slate-50"
                   onClick={handleNav}
                 >
-                  <Link className="text-2xl" to="/about">
-                    Social Activities
-                  </Link>
+                  <NavLink to="/contact" label="Contact" type="mobile" />
                 </li>
                 <li
                   className="hover:text-[#EE3129] py-2 text-slate-50"
                   onClick={handleNav}
                 >
-                  <Link className="text-2xl" to="/about">
-                    Contact
-                  </Link>
+                  <NavLink to="/career" label="Career" type="mobile" />
                 </li>
                 <li
                   className="hover:text-[#EE3129] py-2 text-slate-50"
                   onClick={handleNav}
                 >
-                  <Link className="text-2xl" to="/about">
-                    Career
-                  </Link>
-                </li>
-                <li
-                  className="hover:text-[#EE3129] py-2 text-slate-50"
-                  onClick={handleNav}
-                >
-                  <Link className="text-2xl" to="/about">
-                    Gallery
-                  </Link>
+                  <NavLink to="/gallery" label="Gallery" type="mobile" />
                 </li>
               </ul>
             </div>

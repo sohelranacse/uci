@@ -26,13 +26,13 @@ function AboutDetails() {
     };
   }, []);
   return (
-    <div className="py-16">
+    <div className="md:py-16">
       <div className="md:grid grid-cols-2 py-4 gap-9">
         <div>
-          <h1 className="text-[64px] leading-[75px] text-[#006AB6]">
+          <h1 className="text-5xl md:text-[64px] leading-[75px] text-[#006AB6]">
             About Us
           </h1>
-          <p className="text-[20px] leading-[29px] text-black">
+          <p className="pb-4 text-[20px] leading-[29px] text-black">
             Contrary to popular belief, Lorem Ipsum is not simply random text.
             It has roots in a piece of classical Latin literature from 45 BC,
             making it over 2000 years old. Richard McClintock, a Latin professor
@@ -51,22 +51,25 @@ function AboutDetails() {
       </div>
 
       {/* ceo & founder */}
-      <div className="md:grid grid-cols-5 py-[91px] gap-9">
+      <div className="md:grid grid-cols-5 py-6 md:py-[91px] gap-9">
         <div className="col-span-2">
           <div className="flex gap-2.5">
             <img
-              className="rounded-full"
               src="./images/about-us/avatar.png"
               alt="avarter"
-              width={80}
+              className="h-[80px] md:h-auto w-[80px] rounded-full"
             />
             <div className="text-[#006AB6] pt-2">
-              <h3 className="text-[30px] leading-[29px]">Kenan Mahmud</h3>
-              <p className="py-1 text-[18px] leading-[29px]">CEO & Founder</p>
+              <h3 className="text-xl md:text-[30px] leading-[29px]">
+                Kenan Mahmud
+              </h3>
+              <p className="py-1 text-md md:text-[18px] leading-[29px]">
+                CEO & Founder
+              </p>
             </div>
           </div>
         </div>
-        <p className="col-span-3 font-[600] text-[45px] leading-[60px] text-[#006AB6]">
+        <p className="col-span-3 font-[600] text-3xl py-6 md:py-0 md:text-[45px] md:leading-[60px] text-[#006AB6]">
           "Never quit. It is the easiest cop-out in the world. Set a goal and
           don't quit until you attain it. When you do attain it, set another
           goal, and don't quit until you reach it. Never quit."
@@ -75,37 +78,37 @@ function AboutDetails() {
 
       {/* counter */}
       <div className="md:grid grid-cols-3 gap-16">
-        <div>
+        <div className="pb-6 md:py-0">
           <p className="text-[20px] leading-[29px] text-[#58595B] pb-[34px]">
             There are many variations of passages of Lorem Ipsum available, but
             the majority form, by injected humour.
           </p>
           <h2
-            className="text-[120px] leading-[29px] text-[#006AB6] inline-flex"
+            className="text-8xl md:text-[120px] leading-[29px] text-[#006AB6] inline-flex"
             ref={ref}
           >
             {isVisible ? <Number start={0.1} end={200} decimal={0} /> : 200}+
           </h2>
         </div>
-        <div>
+        <div className="pb-6 md:py-0">
           <p className="text-[20px] leading-[29px] text-[#58595B] pb-[34px]">
             There are many variations of passages of Lorem Ipsum available, but
             the majority form, by injected humour.
           </p>
           <h2
-            className="text-[120px] leading-[29px] text-[#006AB6] inline-flex"
+            className="text-8xl md:text-[120px] leading-[29px] text-[#006AB6] inline-flex"
             ref={ref}
           >
             {isVisible ? <Number start={0.1} end={15} decimal={0} /> : 15}+
           </h2>
         </div>
-        <div>
+        <div className="pb-6 md:py-0">
           <p className="text-[20px] leading-[29px] text-[#58595B] pb-[34px]">
             There are many variations of passages of Lorem Ipsum available, but
             the majority form, by injected humour.
           </p>
           <h2
-            className="text-[120px] leading-[29px] text-[#006AB6] inline-flex"
+            className="text-8xl md:text-[120px] leading-[29px] text-[#006AB6] inline-flex"
             ref={ref}
           >
             {isVisible ? <Number start={0.1} end={20} decimal={0} /> : 20}k+
@@ -114,11 +117,11 @@ function AboutDetails() {
       </div>
 
       {/* story */}
-      <div className="md:grid grid-cols-5 py-[107px] gap-9">
+      <div className="md:grid grid-cols-5 py-16 md:py-[107px] gap-9">
         <div className="col-span-2">
           <img src="./images/about-us/about-details-4.png" alt="story" />
         </div>
-        <div className="col-span-3">
+        <div className="col-span-3 py-8 md:py-0 ">
           <h2 className="text-[40px] text-[#006AB6] leading-[47px]">
             Our Story
           </h2>
@@ -137,7 +140,7 @@ function AboutDetails() {
       {/* mission */}
       <div className="md:grid grid-cols-7 gap-[29px]">
         <div className="col-span-4">
-          <h2 className="text-[40px] font-[600] text-[#006AB6] leading-[29px] pt-[100px]">
+          <h2 className="text-[40px] font-[600] text-[#006AB6] leading-[29px] md:pt-[100px]">
             Our Mission
           </h2>
           <p className="font-[400] text-[20px] leading-[29px] text-[#68696A] py-3.5">
@@ -180,7 +183,7 @@ function AboutDetails() {
           <img src="./images/about-us/about-details-2.png" alt="vission" />
         </div>
         <div className="col-span-4">
-          <h2 className="text-[40px] font-[600] text-[#006AB6] leading-[29px] pt-[125px]">
+          <h2 className="text-[40px] font-[600] text-[#006AB6] leading-[29px] pt-6 md:pt-[125px]">
             Our Vission
           </h2>
           <p className="font-[400] text-[20px] leading-[29px] text-[#68696A] py-3.5">
