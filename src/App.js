@@ -11,7 +11,9 @@ import Loader from "./components/web/Loader";
 import ScrollToTop from "./components/web/common/ScrollToTop";
 import Team from "./pages/web/Team";
 import Group from "./pages/web/Group";
-import NotFound from "./pages/web/NotFound";
+// import NotFound from "./pages/web/NotFound";
+
+import PageProgress from 'react-page-progress'
 
 const LinkScroll = () => {
   const { pathname } = useLocation()
@@ -40,6 +42,7 @@ function App() {
       ) : (
         <>
           <LinkScroll />
+          <PageProgress color={'#034EA2'} height={3} />
           <Nav />
           <Routes>
             <Route path="/" element={<Home />} />
